@@ -18,12 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 //トップページ
-Route::get('/', [UserController::class, 'top']);
+//Route::get('/', [UserController::class, 'top']);
 //ユーザー情報表示ページ
 Route::get('/user', [UserController::class, 'index']);
 //ユーザー情報編集ページ
 Route::get('/user/edit', [UserController::class, 'edit']);
-Route::get('/user/edit', [UserController::class, 'completion']);
+Route::post('/user/edit', [UserController::class, 'completion']);
 
 
 Route::get('/dashboard', function () {

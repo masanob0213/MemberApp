@@ -10,13 +10,25 @@ class UserController extends Controller
 {
     public function index()
     {
-        //$user = Auth::user();
         $name = '' . Auth::user()->name . '';
         $tel = '' . Auth::user()->tel . '';
         $email = '' . Auth::user()->email . '';
-        //$items = User::all();
-        //$items = User::paginate(4);
-        //$param = ['items' => $items, 'user' => $user];
         return view('index', ['name' => $name, 'tel' => $tel, 'email' => $email,]);
+    }
+
+    public function edit()
+    {
+        $id = '' . Auth::user()->id . '';
+        $name = '' . Auth::user()->name . '';
+        $tel = '' . Auth::user()->tel . '';
+        $email = '' . Auth::user()->email . '';
+        return view('edit', ['id' => $id, 'name' => $name, 'tel' => $tel, 'email' => $email,]);
+    }
+    public function completion(Request $request)
+    {
+        $form = $request->all();
+        unset($form['_token']);
+        User::where('id', $request->id)->update($form);
+        return redirect('/user');
     }
 }
