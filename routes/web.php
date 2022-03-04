@@ -15,15 +15,15 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 //トップページ
 //Route::get('/', [UserController::class, 'top']);
 //ユーザー情報表示ページ
-Route::get('/user', [UserController::class, 'index']);
+Route::get('/user', [UserController::class, 'index'])->middleware('auth');
 //ユーザー情報編集ページ
-Route::get('/user/edit', [UserController::class, 'edit']);
-Route::post('/user/edit', [UserController::class, 'completion']);
+Route::get('/user/edit', [UserController::class, 'edit'])->middleware('auth');
+Route::post('/user/edit', [UserController::class, 'completion'])->middleware('auth');
 
 
 Route::get('/dashboard', function () {

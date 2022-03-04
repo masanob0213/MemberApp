@@ -19,7 +19,6 @@
 
   .header {
     /*background-color: greenyellow;*/
-    position: relative;
     height: 60px;
   }
 
@@ -27,21 +26,17 @@
     color: white;
     font-weight: bold;
     display: inline-block;
-    position: absolute;
     margin-left: 30px;
+    width: 70%;
   }
 
-  .link {
-    /*background-color: blue;*/
+  .logout-form {
     display: inline-block;
-    position: absolute;
-    right: 0;
-    margin-top: 20px;
   }
 
   .card {
     background-color: white;
-    height: 450px;
+    height: 600px;
     margin-top: 0px;
     padding-bottom: 30px;
   }
@@ -56,7 +51,7 @@
 <body>
   <div class="all">
     <div class=header>
-      <h1 class="title">Connect inc.</h1>
+      @yield('logout')
     </div>
     <div class="card">
       @yield('card')

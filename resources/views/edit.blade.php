@@ -15,6 +15,20 @@
 
   .date-title {
     font-size: 25px;
+    margin-bottom: 60px;
+  }
+
+  .button-logout {
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #1F2937;
+    border: 2px solid #1F2937;
+    background-color: white;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 0.4s;
+    white-space: nowrap;
   }
 
   .contents {
@@ -36,25 +50,26 @@
   }
 
   input {
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px 0px 10px 10px;
     width: 100%;
   }
 
   .button {
     /*background-color: #FFFF00;*/
-    margin-top: 10px;
     text-align: center;
 
   }
 
-  button {
-    margin: 5px;
+  .button-hooter {
     border-radius: 5px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 20px;
     color: #1F2937;
     border: 2px solid #1F2937;
     background-color: white;
-    padding: 5px 10px;
+    padding: 10px 40px;
     cursor: pointer;
     transition: 0.4s;
     white-space: nowrap;
@@ -64,16 +79,18 @@
     background-color: #1F2937;
     color: white;
   }
-
-  button {
-    padding: 10px 60px;
-    font-weight: bold;
-    font-size: 20px;
-
-  }
 </style>
 
 @extends('layouts.layouts')
+@section('logout')
+<div>
+  <h1 class=title>Connect inc.</h1>
+  <form class=logout-form action="/logout" method="post">
+    @csrf
+    <button class=button-logout>ログアウト</button>
+  </form>
+</div>
+@endsection
 @section('card')
 <div class=date>
   <h1 class=date-title>会員情報変更</h1>
@@ -97,10 +114,10 @@
       </table>
   </div>
   <div class=button>
-    <button class="update-button">修正</button>
+    <button class=button-hooter>変更する</button>
     </form>
     <form action="/user" method="get">
-      <button class="update-button">戻る</button>
+      <button class=button-hooter>戻る</button>
     </form>
   </div>
 </div>
