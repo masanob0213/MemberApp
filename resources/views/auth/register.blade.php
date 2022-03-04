@@ -9,17 +9,13 @@
 <style>
     .data {
         /*background-color: red;*/
-        width: 80%;
+        margin: 20px 80px;
         padding-top: 20px;
-        margin: 20px auto;
     }
 
     .data-title {
         margin-top: 10px;
         margin-bottom: 0px;
-    }
-
-    .data-title {
         font-size: 25px;
     }
 
@@ -34,34 +30,21 @@
     }
 
     .contents-text {
-        margin: 0px;
-        padding: 15px 20px;
         width: 50%;
         text-align: center;
         font-weight: bold;
     }
 
-    .forgot-password {
-        text-align: center;
-    }
-
-    a {
-        color: #1F2937;
-        margin-top: 20px;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
     .contents-input {
         font-size: 18px;
-        padding: 10px 0px 10px 10px;
+        padding: 5px 0px 5px 10px;
         width: 80%;
         display: block;
         margin: 10px 0;
     }
 
     .button {
-        margin: 10px 10px;
+        margin-top: 30px;
         text-align: center;
     }
 
@@ -83,16 +66,20 @@
         color: white;
     }
 
-    .register-button {
+    .login-button {
         margin-top: 10px;
+    }
+
+    a {
+        color: #1F2937;
+        margin-top: 20px;
+        text-decoration: none;
+        font-weight: bold;
     }
 </style>
 
 @extends('layouts.layouts')
 @section('logout')
-<div>
-    <h1 class=title>Connect inc.</h1>
-</div>
 @endsection
 @section('card')
 <div class=data>
@@ -156,7 +143,7 @@
             <button>
                 会員登録
             </button>
-            <div class="register-button">
+            <div class="login-button">
                 <a href="login">
                     ログインはこちら
                 </a>

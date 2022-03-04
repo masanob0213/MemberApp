@@ -13,15 +13,14 @@
     padding-top: 20px;
   }
 
-  .date-title {
-    font-size: 25px;
-    margin-bottom: 60px;
+  .header-logout {
+    display: inline-block;
   }
 
   .button-logout {
     border-radius: 5px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 12px;
     color: #1F2937;
     border: 2px solid #1F2937;
     background-color: white;
@@ -29,6 +28,11 @@
     cursor: pointer;
     transition: 0.4s;
     white-space: nowrap;
+  }
+
+  .date-title {
+    font-size: 25px;
+    margin-bottom: 0px;
   }
 
   .contents {
@@ -56,12 +60,10 @@
   }
 
   .button {
-    /*background-color: #FFFF00;*/
     text-align: center;
-
   }
 
-  .button-hooter {
+  button {
     border-radius: 5px;
     margin-top: 30px;
     font-weight: bold;
@@ -75,6 +77,20 @@
     white-space: nowrap;
   }
 
+  .back-button {
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #1F2937;
+    border: 2px solid #1F2937;
+    background-color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    white-space: nowrap;
+  }
+
   button:hover {
     background-color: #1F2937;
     color: white;
@@ -83,9 +99,8 @@
 
 @extends('layouts.layouts')
 @section('logout')
-<div>
-  <h1 class=title>Connect inc.</h1>
-  <form class=logout-form action="/logout" method="post">
+<div class=header-logout>
+  <form action="/logout" method="post">
     @csrf
     <button class=button-logout>ログアウト</button>
   </form>
@@ -114,10 +129,11 @@
       </table>
   </div>
   <div class=button>
-    <button class=button-hooter>変更する</button>
+    <button>変更する</button>
     </form>
     <form action="/user" method="get">
-      <button class=button-hooter>戻る</button>
+      @csrf
+      <button class=back-button>戻る</button>
     </form>
   </div>
 </div>

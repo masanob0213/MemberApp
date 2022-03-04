@@ -7,20 +7,31 @@
 </head>
 
 <style>
-  .logout {
-    display: inline-block;
-    width: 30%;
-
-  }
-
   .data {
     margin: 20px 80px;
     padding-top: 20px;
   }
 
+  .header-logout {
+    display: inline-block;
+  }
+
+  .button-logout {
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #1F2937;
+    border: 2px solid #1F2937;
+    background-color: white;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 0.4s;
+    white-space: nowrap;
+  }
+
   .data-title {
     font-size: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
 
   .contents {
@@ -42,7 +53,6 @@
   }
 
   .button {
-    /*background-color: #FFFF00;*/
     margin-top: 30px;
     text-align: center;
   }
@@ -69,11 +79,10 @@
 @extends('layouts.layouts')
 
 @section('logout')
-<div>
-  <h1 class=title>Connect inc.</h1>
-  <form class=logout-form action="/logout" method="post">
+<div class=header-logout>
+  <form action="/logout" method="post">
     @csrf
-    <button>ログアウト</button>
+    <button class=button-logout>ログアウト</button>
   </form>
 </div>
 @endsection

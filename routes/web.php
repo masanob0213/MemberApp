@@ -13,13 +13,11 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//トップページ
 Route::get('/', function () {
     return view('auth.login');
 });
-//トップページ
-//Route::get('/', [UserController::class, 'top']);
-//ユーザー情報表示ページ
+//ユーザー情報ページ
 Route::get('/user', [UserController::class, 'index'])->middleware('auth');
 //ユーザー情報編集ページ
 Route::get('/user/edit', [UserController::class, 'edit'])->middleware('auth');

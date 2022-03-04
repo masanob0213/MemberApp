@@ -14,11 +14,9 @@
 
   .all {
     margin: 0px 0px;
-    /*background-color: red;*/
   }
 
   .header {
-    /*background-color: greenyellow;*/
     height: 60px;
   }
 
@@ -27,21 +25,17 @@
     font-weight: bold;
     display: inline-block;
     margin-left: 30px;
-    width: 70%;
-  }
-
-  .logout-form {
-    display: inline-block;
+    width: 75%;
   }
 
   .card {
     background-color: white;
-    height: 600px;
+    height: auto;
     margin-top: 0px;
     padding-bottom: 30px;
   }
 
-  .hooter {
+  .footer-text {
     text-align: center;
     margin-top: 5px;
     color: white;
@@ -51,12 +45,15 @@
 <body>
   <div class="all">
     <div class=header>
+      <h1 class=title>Connect inc.</h1>
       @yield('logout')
     </div>
     <div class="card">
       @yield('card')
     </div>
-    <p class=hooter>Connect inc.</p>
+    <div>
+      <p class=footer-text>Connect inc.</p>
+    </div>
   </div>
 </body>
 
