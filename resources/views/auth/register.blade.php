@@ -83,13 +83,12 @@
 @section('logout')
 @endsection
 @section('card')
-<div class=data>
-    <h1 class=data-title>会員登録</h1>
-    <!-- Validation Errors -->
-    <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-    <form action="{{ route('register') }}" method="POST">
-        @csrf
+<form action="{{ route('register') }}" method="POST">
+    @csrf
+    <div class=data>
+        <h1 class=data-title>会員登録</h1>
+        <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
         <div>
             <table>
                 <!-- Name -->
@@ -144,15 +143,13 @@
                 会員登録
             </button>
         </div>
-    </form>
-    <div class="login-button">
-        <a href="login">
-            ログインはこちら
-        </a>
+        <div class="login-button">
+            <a href="login">
+                ログインはこちら
+            </a>
+        </div>
     </div>
-</div>
-
-</div>
+</form>
 @endsection
 
 </html>
