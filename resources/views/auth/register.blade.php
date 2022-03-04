@@ -67,6 +67,7 @@
     }
 
     .login-button {
+        text-decoration: none;
         margin-top: 10px;
     }
 
@@ -138,20 +139,20 @@
                 </tr>
             </table>
         </div>
-
         <div class=button>
             <button>
                 会員登録
             </button>
-            <div class="login-button">
-                <a href="login">
-                    ログインはこちら
-                </a>
-            </div>
         </div>
     </form>
+    <div class="login-button">
+        <a href="login">
+            ログインはこちら
+        </a>
+    </div>
+</div>
+
 </div>
 @endsection
-</div>
 
 </html>
