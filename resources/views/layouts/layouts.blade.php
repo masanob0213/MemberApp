@@ -50,6 +50,7 @@
     </div>
     <div class="card">
       @yield('card')
+      @csrf
     </div>
     <div>
       <p class=footer-text>Connect inc.</p>
