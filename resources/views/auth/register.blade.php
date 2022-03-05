@@ -68,7 +68,8 @@
 
     .login-button {
         text-decoration: none;
-        margin-top: 10px;
+        text-align: center;
+        margin-top: 15px;
     }
 
     a {
